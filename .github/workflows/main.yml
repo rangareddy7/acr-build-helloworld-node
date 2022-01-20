@@ -1,6 +1,11 @@
-on: [push]
-name: Linux_Container_Workflow
+name: Docker Image CI
 
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
